@@ -1,0 +1,92 @@
+[
+	{
+		"PermCode": "CRMS_APPROVECR",
+		"roleName": "ACCOUNTS PAYABLE - MANAGER",
+		"permName": "APPROVE CRMS REQUEST"
+	},
+
+	{
+		"PermCode": "CRMS_ACCOUNTING_APPROVECR",
+		"roleName": "ACCOUNTING - MANAGER",
+		"permName": "APPROVE CRMS REQUEST FROM ACCOUNTING DEPARTMENT"
+	},
+	{
+		"PermCode": "CRMS_SAFETY_HZMT_APPROVECR",
+		"roleName": "SAFETY - HAZMAT MANAGER",
+		"permName": "APPROVE HAZMAT CRMS REQUEST FROM SAFETY DEPARTMENT"
+	},
+	{
+		"PermCode": "CRMS_TRAFFIC_APPROVECR",
+		"roleName": "COLLECTION - MANAGER",
+		"permName": "APPROVE CRMS REQUEST FROM TRAFFIC DEPARTMENT"
+	},
+
+	{
+		"PermCode": "CRMS_ACCNTPYBL_APPROVECR",
+		"roleName": "ACCOUNTS PAYABLE - MANAGER",
+		"permName": "APPROVE CRMS REQUEST FROM ACCOUNTS PAYABLE DEPARTMENT"
+	},
+	{
+		"PermCode": "CRMS_ACCNTREC_APPROVECR",
+		"roleName": "ACCOUNTS RECEIVABLE - MANAGER",
+		"permName": "SUBMIT CRMS REQUEST FROM ACCOUNTS RECEIVABLE DEPARTMENT"
+	},
+	{
+		"PermCode": "CRMS_SAFETY_APPROVECR",
+		"roleName": "ACCOUNTS PAYABLE - MANAGER",
+		"permName": "APPROVE CRMS REQUEST FROM SAFETY DEPARTMENT"
+	},
+	{
+		"PermCode": "CRMS_RATES_APPROVECR",
+		"roleName": "COLLECTION - MANAGER",
+		"permName": "APPROVE CRMS REQUEST FROM RATES DEPARTMENT"
+	},
+	{
+		"PermCode": "CRMS_SAFETY_CLAIMS_APPROVECR",
+		"roleName": "SAFETY - CLAIMS MANAGER",
+		"permName": "APPROVE CLAIMS CRMS REQUEST FROM SAFETY DEPARTMENT"
+	},
+	{
+		"PermCode": "CRMS_COLLECTIONS_APPROVECR",
+		"roleName": "COLLECTIONS - MANAGER",
+		"permName": "APPROVE CRMS REQUEST FROM COLLECTIONS DEPARTMENT"
+	},
+	//TIER LEVEL PERMISSION CODES
+	{
+		"PermCode": "CRMS_APPROVECR_TIER1",
+		"roleName": "SAFETY - CLAIMS COORDINATOR",
+		"permName": "APPROVE TIER 1 CRMS REQUEST",
+		"deptName": "Claims"
+	},
+	{
+		"PermCode": "CRMS_APPROVECR_TIER2",
+		"roleName": "SAFETY - CLAIMS MANAGER",
+		"permName": "APPROVE TIER 2 CRMS REQUEST",
+		"deptName": "Claims"
+	},
+	{
+		"PermCode": "CRMS_APPROVECR_TIER3",
+		"roleName": "SAFETY - VICE PRESIDENT",
+		"permName": "APPROVE TIER 3 CRMS REQUEST",
+		"deptName": "Claims"
+	},
+	{
+		"PermCode": "CRMS_APPROVECR_TIER1",
+		"roleName": "SAFETY - HAZMAT MANAGER",
+		"permName": "APPROVE TIER 1 CRMS REQUEST",
+		"deptName": "HM"
+	},
+	{
+		"PermCode": "CRMS_APPROVECR_TIER2",
+		"roleName": "SAFETY - HAZMAT MANAGER",
+		"permName": "APPROVE TIER 2 CRMS REQUEST",
+		"deptName": "HM"
+	},
+	{
+		"PermCode": "CRMS_APPROVECR_TIER3",
+		"roleName": "SAFETY - VICE PRESIDENT",
+		"permName": "APPROVE TIER 3 CRMS REQUEST",
+		"deptName": "HM"
+	}
+
+]

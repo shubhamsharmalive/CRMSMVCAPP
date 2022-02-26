@@ -204,3 +204,23 @@ function SavePVItem(data) {
 	GetUserDetails.BindEmployeeDetails(UserDetailsList);
 	IsEditablePVItem = false;
 }
+
+function displayapproverlistOnClick() {
+
+	$("#div-getuserdetails").html("Please wait loading.....");
+
+	$.ajax({
+		type: 'POST',
+		dataType: 'json',
+		url: $("#div-getroleetails").attr('data-ajax-url'),
+		success: function (result) {
+			if (true) {
+				alert("You are assigned for " + result.roleName + "-" + result.permName);
+			}
+		},
+		error: function () {
+			alert("No role is assigned.");
+		}
+	});
+
+}

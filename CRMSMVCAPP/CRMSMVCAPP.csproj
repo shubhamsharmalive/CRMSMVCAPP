@@ -133,6 +133,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\PackageDetails.cs" />
+    <Compile Include="Models\Permissions.cs" />
     <Compile Include="Models\UserDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -176,6 +177,7 @@
     <None Include="Connected Services\PackageService\Service13.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Data\ApprovalRoles.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

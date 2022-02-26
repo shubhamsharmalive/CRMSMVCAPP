@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -131,6 +132,24 @@ namespace CRMSMVCAPP.Controllers
             PackageService.PackageDetails packageDetails =  packageServiceClient.GetPackageData(obj.PackageId);
 
             return View(packageDetails);
+        }
+
+        /// <summary>
+        /// To fetch logged in user permission details from JSON.
+        /// </summary>
+        /// <returns></returns>
+        public async Task<ActionResult> GetUserPermissionDetails()
+        {
+            List<Permissions> prmDetails = new List<Permissions>();
+            using (StreamReader r = new StreamReader(System.Web.HttpContext.Current.Server.MapPath("~/Data/ApprovalRoles.json")))
+            {
+                string json = r.ReadToEnd();
+                prmDetails = JsonConvert.DeserializeObject<List<Permissions>>(json);
+            }
+
+            var permission = prmDetails.FirstOrDefault(x => x.PermCode.Equals("CRMS_TRAFFIC_APPROVECR"));
+
+            return Json(permission);
         }
 
     }
