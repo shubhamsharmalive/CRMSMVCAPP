@@ -16,7 +16,7 @@
     <AssemblyName>CRMSMVCAPP</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44346</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
@@ -132,6 +132,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CityDetails.cs" />
     <Compile Include="Models\PackageDetails.cs" />
     <Compile Include="Models\Permissions.cs" />
     <Compile Include="Models\UserDetails.cs" />
@@ -189,6 +190,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\Views\ControlsScript.js" />
     <Content Include="Scripts\Views\GetUserDetails.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -207,6 +209,8 @@
     <Content Include="Views\UserDetails\GetUserDetails.cshtml" />
     <Content Include="Views\UserDetails\CreateUser.cshtml" />
     <Content Include="Views\UserDetails\PackageDetails.cshtml" />
+    <Content Include="Views\UserDetails\_Autocomplete.cshtml" />
+    <Content Include="Views\Home\AutocompleteCity.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -248,7 +252,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>52692</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44346/</IISUrl>
+          <IISUrl>http://localhost/CRMSMVCAPP</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

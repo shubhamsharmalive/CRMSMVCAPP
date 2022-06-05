@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CRMSMVCAPP.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -25,6 +26,51 @@ namespace CRMSMVCAPP.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        public ActionResult AutoCompleteCity()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+        [HttpPost]
+        public JsonResult GetCityDetails(string Prefix)
+        {
+            //Note : you can bind same list from database  
+            List<CityDetails> ObjList = new List<CityDetails>()
+            {
+
+                new CityDetails {Id=3,Name="Pune" },
+                new CityDetails {Id=4,Name="Delhi" },
+                new CityDetails {Id=5,Name="Dehradun" },
+                new CityDetails {Id=6,Name="Noida" },
+                new CityDetails {Id=7,Name="New Delhi" },
+                new CityDetails {Id=1,Name="Latur" },
+                new CityDetails {Id=2,Name="Mumbai" },
+                new CityDetails {Id=13,Name="Indore" },
+                new CityDetails {Id=14,Name="Bhopal" },
+                new CityDetails {Id=15,Name="Ranchi" },
+                new CityDetails {Id=16,Name="Patna" },
+                new CityDetails {Id=17,Name="Kolkata" },
+                new CityDetails {Id=11,Name="Banglore" },
+                new CityDetails {Id=12,Name="Hyderabad" },
+                new CityDetails {Id=24,Name="Jaipur" },
+                new CityDetails {Id=25,Name="Shimla" },
+                new CityDetails {Id=26,Name="Gurgaon" },
+                new CityDetails {Id=27,Name="Nagpur" },
+                new CityDetails {Id=21,Name="Andman" },
+                new CityDetails {Id=22,Name="Gangtok" },
+                new CityDetails {Id=23,Name="Gujrat" }
+
+            };
+
+            //Searching records from list using LINQ query  
+            var Name = (from N in ObjList
+                        where N.Name.Contains(Prefix.ToLower()) || N.Name.Contains(Prefix.ToUpper()) //StartsWith
+                        select new { N.Name });
+            return Json(Name, JsonRequestBehavior.AllowGet);
         }
     }
 }
