@@ -32,7 +32,27 @@ namespace CRMSMVCAPP.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
-            return View();
+            CityDetails cityDetails = new CityDetails();
+
+            List<ValueNamePair> CountryList = new List<ValueNamePair>
+        {
+            new ValueNamePair { Value = "IND", Name ="India"},
+            new ValueNamePair { Value = "PKN", Name ="Pakistan"},
+            new ValueNamePair { Value = "JPN", Name ="Japan"},
+            new ValueNamePair { Value = "RSA", Name ="Russia"},
+            new ValueNamePair { Value = "FR", Name ="France"},
+            new ValueNamePair { Value = "USA", Name ="America"},
+            new ValueNamePair { Value = "AUS", Name ="Australia"},
+            new ValueNamePair { Value = "BNG", Name ="Bangladesh"},
+            new ValueNamePair { Value = "CHI", Name ="China"},
+            new ValueNamePair { Value = "CAN", Name ="Canada"},
+            new ValueNamePair { Value = "BRZ", Name ="Brazil"},
+
+        };
+
+            cityDetails.CoutryList = new SelectList(CountryList, "Value", "Name", "");
+
+            return View(cityDetails);
         }
 
         [HttpPost]
