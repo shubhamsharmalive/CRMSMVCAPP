@@ -158,6 +158,7 @@
     <Content Include="Content\images\cancel_green.png" />
     <Content Include="Content\images\delete_green.png" />
     <Content Include="Content\images\edit_green.png" />
+    <Content Include="Content\images\loadingBig.gif" />
     <Content Include="Content\images\save_green.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

@@ -56,6 +56,9 @@ var ControlScript = ControlScript ||
 
 DisplayNotificationBar = function () {
 
+    $('#loading').css('display', 'inline-block');
+    $('#Process-Modal').show();
+
     ShowMessage("Internal exception Occured.", 'Error');
 
 }
