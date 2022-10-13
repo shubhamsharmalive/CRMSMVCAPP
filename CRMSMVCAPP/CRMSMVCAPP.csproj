@@ -180,6 +180,7 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Data\ApprovalRoles.json" />
+    <Content Include="Content\images\TechnwaysPDF.pdf" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -212,6 +213,8 @@
     <Content Include="Views\UserDetails\PackageDetails.cshtml" />
     <Content Include="Views\UserDetails\_Autocomplete.cshtml" />
     <Content Include="Views\Home\AutocompleteCity.cshtml" />
+    <Content Include="Views\Home\ViewPDF.cshtml" />
+    <Content Include="Views\Home\_PDFView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

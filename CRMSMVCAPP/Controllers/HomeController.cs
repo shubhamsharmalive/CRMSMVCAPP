@@ -92,5 +92,16 @@ namespace CRMSMVCAPP.Controllers
                         select new { N.Name });
             return Json(Name, JsonRequestBehavior.AllowGet);
         }
+
+        public ActionResult ViewPDF()
+        {
+            return View();
+        }
+
+        public PartialViewResult _PDFView(string name)
+        {
+            return PartialView("_PDFView");
+
+        }
     }
 }

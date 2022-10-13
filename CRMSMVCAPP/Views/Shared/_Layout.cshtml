@@ -8,7 +8,7 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top"  style="background-color: darkslategrey;">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -24,6 +24,15 @@
                     <li>@Html.ActionLink("User Details", "GetUserDetails", "UserDetails")</li>
                     <li>@Html.ActionLink("Create User", "CreateUser", "UserDetails")</li>
                     <li>@Html.ActionLink("City Detail", "AutoCompleteCity", "Home")</li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Features <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" style="background-color: darkslategrey; color: #89C53F;">
+                            <li>@Html.ActionLink("View PDF", "ViewPDF", "UserDetails", new { @style = "color:#89C53F;" })</li>
+                            @*<li>@Html.ActionLink(" City Details", "AutoCompleteCity", "Home", new { @style = "color:#89C53F;" })</li>*@
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -32,7 +41,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - CRMST Application</p>
+            <p style="color: #89C53F;">&copy; @DateTime.Now.Year - CRMS Application developed by <strong>Technways</strong></p>
         </footer>
     </div>
 
