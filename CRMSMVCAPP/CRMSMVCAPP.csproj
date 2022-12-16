@@ -215,6 +215,8 @@
     <Content Include="Views\Home\AutocompleteCity.cshtml" />
     <Content Include="Views\Home\ViewPDF.cshtml" />
     <Content Include="Views\Home\_PDFView.cshtml" />
+    <Content Include="Views\Home\Charts.cshtml" />
+    <Content Include="Views\Home\SessionStorage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

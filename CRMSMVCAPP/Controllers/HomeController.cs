@@ -103,5 +103,15 @@ namespace CRMSMVCAPP.Controllers
             return PartialView("_PDFView");
 
         }
+
+        public ActionResult Charts()
+        {
+            return View();
+        }
+
+        public ActionResult SessionStorage()
+        {
+            return View();
+        }
     }
 }

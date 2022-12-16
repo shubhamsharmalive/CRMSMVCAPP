@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "SessionStorage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section JavascriptRefrences{
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+
+        SaveDataSession = function () {
+
+            const fullName = $('#txtName').val();
+            sessionStorage.setItem('name', fullName);
+
+        }
+
+
+        GetSessionData = function () {
+
+            const fullName = sessionStorage.getItem('name');
+            $('#lblName').text(fullName);
+        }
+
+    </script>
+}
+
+<h3>Session Storage</h3>
+
+<h4> <b>Save data in Session:</b></h4>
+<div style="width:50%;">
+    @Html.Editor("Name", new { htmlAttributes = new { id = "txtName", @class = "form-control", style = "float: left;" } })
+    <button type="button" id="btnSaveSession" class="btn-primary" style="margin: 20px; width: 16%; height: 31px; background-color: #89C53F;" onclick="SaveDataSession()"> Save Data</button>
+    <button type="button" id="btnGetSession" class="btn-primary" style="margin: 20px; width: 16%; height: 31px; background-color: #89C53F;" onclick="GetSessionData()"> Get Data </button>
+
+    <h3> Result:</h3>
+    <label id="lblName"></label>
+
+</div>
+
