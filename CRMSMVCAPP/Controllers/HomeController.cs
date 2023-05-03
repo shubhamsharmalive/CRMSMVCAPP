@@ -4,6 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+//QR Code Generator
+using QRCoder;
+using System.IO;
+using System.Drawing;
+using System.Drawing.Imaging;
+
 
 namespace CRMSMVCAPP.Controllers
 {
@@ -113,5 +119,29 @@ namespace CRMSMVCAPP.Controllers
         {
             return View();
         }
+
+        public ActionResult GenerateQRCode()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ViewResult GenerateQRCode(QRCodeModel model)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                QRCodeGenerator qrGenerator = new QRCodeGenerator();
+                QRCodeData qrCodeData = qrGenerator.CreateQrCode(model.qrcode, QRCodeGenerator.ECCLevel.Q);
+                QRCode qrCode = new QRCode(qrCodeData);
+                using (Bitmap bitMap = qrCode.GetGraphic(20))
+                {
+                    bitMap.Save(ms, ImageFormat.Png);
+                    ViewBag.QRCodeImage = "data:image/png;base64," + Convert.ToBase64String(ms.ToArray());
+                }
+            }
+
+            return View("GenerateQRCode");
+        }
+
     }
 }

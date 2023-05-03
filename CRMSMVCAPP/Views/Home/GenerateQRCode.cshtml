@@ -1,0 +1,38 @@
+﻿@model  CRMSMVCAPP.Models.QRCodeModel
+
+@{
+    ViewBag.Title = "GenerateQRCode";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Generate QR Code</h2>
+
+<h1></h1>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+
+<body>
+    @using (Html.BeginForm("GenerateQRCode", "Home", FormMethod.Post))
+    {
+        @Html.TextBoxFor(model => model.qrcode)
+        @Html.ValidationMessageFor(model => model.qrcode)
+
+        <button type="submit">Generate</button>
+    }
+
+    @if (ViewBag.QRCodeImage != null)
+    {
+        <h3>You can scan below QR code for details.</h3>
+        <h1></h1>
+
+        <img src="@ViewBag.QRCodeImage" alt="" style="height:200px;width:200px" />
+    }
+</body>
+
+</html>
