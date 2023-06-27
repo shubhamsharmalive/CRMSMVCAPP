@@ -143,5 +143,10 @@ namespace CRMSMVCAPP.Controllers
             return View("GenerateQRCode");
         }
 
+        public ActionResult TextToSpeech()
+        {
+            return View();
+        }
+
     }
 }

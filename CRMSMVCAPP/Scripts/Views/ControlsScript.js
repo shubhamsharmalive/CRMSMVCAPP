@@ -87,3 +87,19 @@ function ShowMessage(message, messagetype) {
         });
     }, 5000);//5000=5 seconds
 }
+
+TextToSpeech = function () {
+
+    let txt = document.getElementById("taText");
+    let btn = document.getElementById("btnSpeech");
+
+    btn.addEventListener("click", function () {
+
+        let text = txt.value;
+        let utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = "tr";
+        speechSynthesis.speak(utterance);
+    });
+
+
+}

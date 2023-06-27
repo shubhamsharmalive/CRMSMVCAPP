@@ -225,6 +225,7 @@
     <Content Include="Views\Home\Charts.cshtml" />
     <Content Include="Views\Home\SessionStorage.cshtml" />
     <Content Include="Views\Home\GenerateQRCode.cshtml" />
+    <Content Include="Views\Home\TextToSpeech.cshtml" />
     <None Include="Web.Staging.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

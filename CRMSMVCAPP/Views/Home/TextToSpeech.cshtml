@@ -1,0 +1,44 @@
+﻿@model CRMSMVCAPP.Models.QRCodeModel
+
+@{
+    ViewBag.Title = "TextToSpeech";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@section JavascriptRefrences{
+    <script src="@Url.Content("~/Scripts/Views/ControlsScript.js")" type="text/javascript"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" type="text/javascript"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <!-- jQuery library for multiselect -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+}
+
+<h3>Text To Speech</h3>
+
+<h1></h1>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+
+<body>
+    @using (Html.BeginForm("TextToSpeech", "Home", FormMethod.Post))
+    {
+        @Html.TextAreaFor(model => model.qrcode, new { id = "taText", style = "float:left; margin-right: 15px; width: 100%;" })
+        @Html.ValidationMessageFor(model => model.qrcode)
+
+        <button type="button" id="btnSpeech" class="btn-primary" style=" width: 11%; height: 31px;" onclick="TextToSpeech()">Speak </button>
+    }
+
+</body>
+
+</html>
